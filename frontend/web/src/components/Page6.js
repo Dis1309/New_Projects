@@ -65,9 +65,10 @@ export default function Page6({
     //var amnt = Number(amount);
     //console.log(amnt);
     //var v = amnt * x;
-    //let usdcBalance = ethers.parseUnits(v.toString(), 18);
     let a = Number(amount);
-    const amount_for_transaction = "0x" + a.toString(16);
+    let usdcBalance = ethers.parseUnits(a.toString());
+    
+    const amount_for_transaction = "0x" + usdcBalance.toString(16);      
 
     //Calling Metamask for transaction
     const receiver = contract
