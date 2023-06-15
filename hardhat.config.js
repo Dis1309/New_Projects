@@ -15,6 +15,7 @@ require("@nomiclabs/hardhat-waffle");
 const API_URL_MUMBAI = process.env.API_URL_MUMBAI;
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
 const API_URL_MAINNET = process.env.API_URL_MAINNET;
+const API_URL_SMART_CHAIN_TESTNET = process.env.API_URL_SMART_CHAIN_TESTNET;
 
 //Deploying network export
 module.exports = {
@@ -33,5 +34,10 @@ module.exports = {
          accounts : [`0x${PRIVATE_KEY}`],
          chainId : 137,
       },
+      smart_chain_testnet : {
+         url : API_URL_SMART_CHAIN_TESTNET,
+         accounts : [`0x${PRIVATE_KEY}`],
+         chainId : 97,
+      }
    },
 }

@@ -49,6 +49,7 @@ function Page1({ acc, setacc, contract, setcontract }) {
     //         ],
     //       });
 
+
           // THIS IS THE POLYGON MUMBAI REQUEST FOR ACCOUNTS... TO CONNECT TO METAMASK {uncomment to use}
           await window.ethereum.request({
             method: "wallet_switchEthereumChain",
@@ -76,6 +77,40 @@ function Page1({ acc, setacc, contract, setcontract }) {
                   },
                 ],
               });
+
+        // THIS IS BNB TESTNET REQUEST FOR ACCOUNT ... TO CONNECT TO METAMASK {uncomment to use}
+          //   await window.ethereum.request({
+          //     method: "wallet_switchEthereumChain",
+          //     params: [{ chainId: "0x61" }],
+          //   });
+          // } catch (switchError) {
+          //   var next = 97;
+          //   // This error code indicates that the chain has not been added to MetaMask.
+          //   if (switchError.code === 4902) {
+          //     try {
+          //       await window.ethereum.request({
+          //         method: "wallet_addEthereumChain",
+          //         params: [
+          //           {
+          //             chainId: "0x" + next.toString(16),
+          //             chainName: "Binance Smart Chain Testnet",
+          //             nativeCurrency: {
+          //               name: "BNB",
+          //               symbol: "BNB",
+          //               decimals: 18,
+          //             },
+          //             rpcUrls: [
+          //               // "https://data-seed-prebsc-1-s1.binance.org:8545/",
+          //               // "https://bsc-testnet.public.blastapi.io",
+          //               // "https://bsc-testnet.publicnode.com",
+          //               // "https://data-seed-prebsc-1-s1.binance.org:8545",
+          //               // "https://data-seed-prebsc-2-s1.binance.org:8545",
+          //               // "https://rpc.ankr.com/bsc_testnet_chapel",
+          //               "https://bsc-dataseed.binance.org/",
+          //             ] /* ... */,
+          //           },
+          //         ],
+          //       });
         } catch (addError) {
           console.log(addError);
         }
