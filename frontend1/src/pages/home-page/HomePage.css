@@ -1,0 +1,127 @@
+.homePage {
+  display: flex;
+  flex-direction: column;
+  /* background-position: center; */
+  /* min-height: 120vh;
+  background-image: url("../../assets/home-page/background-img.png");
+  background-repeat: no-repeat; */
+  /* background-size: cover; /* Resize the background image to cover the entire container */
+  height: 100vh;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+.homePageBackgroundGradient {
+  position: absolute;
+width: 162px;
+height: 486px;
+left: calc(50% - 162px/2);
+top: -94px;
+
+background: linear-gradient(180.21deg, rgba(255, 255, 255, 0.48) -185.76%, rgba(255, 255, 255, 0) 92.72%);
+filter: blur(16.29px);
+}
+
+.homePageTitle {
+  /* background: linear-gradient(180deg, #ffffff -37.82%, #9ec1fa 119.23%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent; */
+  margin-top: 150px;
+}
+
+.homePageTitle img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 24px;
+}
+
+.homePageTitle h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  /* identical to box height, or 125% */
+
+  text-align: center;
+  letter-spacing: -0.01em;
+  margin: 0;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.homePageTitle h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 78px;
+  line-height: 78px;
+  /* identical to box height, or 100% */
+  text-align: center;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+.homePageTitle p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height, or 138% */
+  margin: 0;
+  text-align: center;
+  margin-bottom: 24px;
+  color: #d8e4fd;
+}
+
+.homePageInputWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-height: 72px;
+  border-radius: 6px;
+}
+
+.homePageInputWrapper p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  /* identical to box height, or 171% */
+  color: #D8E4FD;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.homePageInputWrapper p img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Bottom Image */
+
+.lower {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lower .lower_arc {
+  width: 100vw;
+}
+
+.iphone_bottom {
+  position: fixed;
+  bottom: -10px;
+}
+
+.iphone_bottom img {
+  height: 40vh;
+  border-radius: 1.7rem 1.7rem 0 0;
+  /* box-shadow: 0 0 0.9rem white; */
+}

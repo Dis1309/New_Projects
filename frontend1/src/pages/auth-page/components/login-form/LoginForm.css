@@ -1,0 +1,92 @@
+.loginWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 392px;
+  margin-top: 160px;
+}
+
+.loginWrapperLogo {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 24px;
+}
+
+.loginWrapper h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 38px;
+  /* identical to box height, or 127% */
+
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.loginWrapper p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+
+  /* Secondary-text */
+  margin: 0;
+  color: #d8e4fd;
+  margin-bottom: 24px;
+}
+
+.loginWrapper button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  width: 392px;
+  height: 48px;
+  gap: 12px;
+  border: 2px solid #2070f4;
+  border-radius: 32px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  /* identical to box height, or 100% */
+
+  text-align: center;
+  text-transform: capitalize;
+
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.loginWrapper button img {
+  width: 24px;
+  height: 24px;
+}
+
+.loginWrapperBlueBtn {
+  background: #2070f4;
+}
+
+.loginWrapperTranspBtn {
+  background: transparent;
+}
+
+.loginSwitch {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  /* Secondary-text */
+
+  color: #d8e4fd;
+}
+
+.loginSwitch span {
+  color: #508ff6;
+}
