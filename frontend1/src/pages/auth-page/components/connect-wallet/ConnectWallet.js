@@ -88,6 +88,7 @@ const ConnectWallet = ({setProceedTo,  setsigner, setwalletaddress, setcontract}
        
         const contract = new ethers.Contract(config.address_nft, conABI, res);
         setcontract(contract);
+        
         var walletaddress = res.address;
         // console.log(res.address);
 
