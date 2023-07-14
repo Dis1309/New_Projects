@@ -14,50 +14,50 @@ import { Navigate, Routes, Route, BrowserRouter, Router } from "react-router-dom
 import MyNumbersPage from "./pages/my-numbers-page/MyNumbersPage";
 import LoadPage from "./utils/loaders/LoadPage";
 
-function App() {
-  const [user, setUser] = useState({ isLoggedIn: null, email: "" });
-  const [loading, setLoading] = useState(true);
-  const [contract, setcontract] = useState({});
-  const [signer , setsigner] = useState({});
-  const [walletaddress, setwalletaddress] = useState(null);
+// function App() {
+//   const [user, setUser] = useState({ isLoggedIn: null, email: "" });
+//   const [loading, setLoading] = useState(true);
+//   const [contract, setcontract] = useState({});
+//   const [signer , setsigner] = useState({});
+//   const [walletaddress, setwalletaddress] = useState(null);
 
-  const validateUser = async () => {
-    try {
-      await checkUser(setUser);
-      setLoading(false);
-    } catch (error) {
-      console.error(error);
-      setLoading(false);
-    }
-  };
+//   const validateUser = async () => {
+//     try {
+//       await checkUser(setUser);
+//       setLoading(false);
+//     } catch (error) {
+//       console.error(error);
+//       setLoading(false);
+//     }
+//   };
 
-  console.log(window.location.pathname);
-  useEffect(() => {
-    validateUser();
-  }, []);
+//   console.log(window.location.pathname);
+//   useEffect(() => {
+//     validateUser();
+//   }, []);
 
-  return (
-    <BrowserRouter>
-     {!loading &&
-      <div className="App">
-     
-        <Navbar loggedIn={user.isLoggedIn} />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/home" element={<HomePage />} />
-          <Route path={"/search-results"} element={<SearchResultsPage />} />
-          <Route path={"/signup"} element={<AuthenticationPage walletaddress={walletaddress} setwalletaddress={setwalletaddress} signer={signer} setsigner={setsigner} setcontract={setcontract}/>} />
-          <Route path={"/my-numbers"} element={<MyNumbersPage signer={signer} walletaddress={walletaddress} contract={contract}/>} />
-        </Routes>
-      </div>}
-    </BrowserRouter>
-  );
-}
-
-export default App;
-
-// export default function App(){
 //   return (
-//     <SelectionPage />
-//   )
+//     <BrowserRouter>
+//      {!loading &&
+//       <div className="App">
+     
+//         <Navbar loggedIn={user.isLoggedIn} />
+//         <Routes>
+//           <Route path="/" element={<HomePage />} />
+//           <Route path="/home" element={<HomePage />} />
+//           <Route path={"/search-results"} element={<SearchResultsPage />} />
+//           <Route path={"/signup"} element={<AuthenticationPage walletaddress={walletaddress} setwalletaddress={setwalletaddress} signer={signer} setsigner={setsigner} setcontract={setcontract}/>} />
+//           <Route path={"/my-numbers"} element={<MyNumbersPage signer={signer} walletaddress={walletaddress} contract={contract}/>} />
+//         </Routes>
+//       </div>}
+//     </BrowserRouter>
+//   );
 // }
+
+// export default App;
+
+export default function App(){
+  return (
+    <AuthenticationPageReal />
+  )
+}

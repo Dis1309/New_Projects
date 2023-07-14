@@ -2,6 +2,29 @@ import React from "react";
 import './AuthenticationPageReal.css'
 
 export default function AuthenticationPageReal() {
+    const check = async () => {
+        // const data = document.getElementById("number").toString();
+        
+        fetch('http://localhost:8080/twilio-sms/verify-otp', {
+            method: 'POST',
+            headers: { 
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            },
+            body: JSON.stringify({
+                "countryCode": "91",
+                "phoneNumber" : "8595803635",
+                "otp": "370990"
+            }),
+          }).then(async (res)=>{
+            console.log(res);
+          }).catch((e)=>{
+            console.log(e);
+          })
+          
+       
+        
+    }
     return (
         <div className="authenticationPageReal">
             <div className="apr-navbar">
@@ -29,7 +52,7 @@ export default function AuthenticationPageReal() {
                     </div>
                 </div>
                 <div className="apr-btn">
-                    <button className="btn">Continue</button>
+                    <button className="btn" onClick={check}>Continue</button>
                 </div>
             </div>
             <div className="apr-footer">

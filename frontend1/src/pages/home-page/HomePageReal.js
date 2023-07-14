@@ -3,6 +3,26 @@ import './HomePageReal.css'
 import Navbar from "../../layout/navbar/Navbar";
 
 export default function HomePageReal() {
+    const check = async () => {
+        // const data = document.getElementById("number").toString();
+        
+        fetch('http://localhost:8080/twilio-sms/send-otp', {
+            method: 'POST',
+            headers: { 
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            },
+            body: JSON.stringify({
+                "countryCode": "91",
+                "phoneNumber" : "8595803635" 
+            }),
+          }).then(async (res)=> {
+            console.log(JSON.stringify(res));
+          }).catch ((e) =>{console.log(e)})
+          
+        
+        
+    }
     return (
         <div className="homePageReal">
             <div className="hpr-navbar">
@@ -35,7 +55,7 @@ export default function HomePageReal() {
                     </div>
                 </div>
                 <div className="hpr-btn">
-                    <button className="btn">Continue</button>
+                    <button className="btn" onClick={check}>Continue</button>
                 </div>
             </div>
             <div className="hpr-footer">
